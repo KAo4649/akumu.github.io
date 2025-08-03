@@ -60,7 +60,7 @@
         .error-message {
             color: red;
             margin-top: 10px;
-            display: none; /* 初期状態では非表示 */
+            display: none;
         }
     </style>
 </head>
@@ -76,32 +76,39 @@
                 <label for="password">パスワード:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">ログイン</button>
-            <p id="errorMessage" class="error-message">ユーザー名またはパスワードが間違っています。</p>
+            <button type="submit">ログイン（？）</button>
+            <p id="errorMessage" class="error-message">ログイン（？）に失敗しましたwww</p>
         </form>
     </div>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // フォームのデフォルトの送信を防ぐ
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-            const Get1ocation = document.getElementById('Get1ocation').value;
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('errorMessage');
+            const A = document.getElementById('Get1ocation').value;
+            const B = document.getElementById('password').value;
+            const C = document.getElementById('errorMessage');
 
-            // ここに認証ロジックを記述します。
-            // 実際には、サーバーサイドでユーザー名とパスワードを検証します。
-            if (Get1ocation === "1' or '1' = '1';-- ") { // 例: 'user'/'password'でログイン
-                alert('成功！\n乳製品は悪夢を見やすくなる！'); // URLはアラートから削除
+            // めんどくさいことをしてみる
+            let D = '';
+            let E = '1';
+            let F = "'";
+            let G = ' ';
+            let H = 'or';
+            let I = '=';
+            let J = ';';
+            let K = '--';
 
-                // URLを新しいタブで開く
+            for (let L = 0; L < 1; L++) {
+                D += E + F + G + H + G + F + E + F + G + I + G + F + E + F + J + K + G;
+            }
+
+            if (A === D) {
+                alert('成功！\n乳製品は悪夢を見やすくなる！');
                 window.open('https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00047/full', '_blank');
-
-                errorMessage.style.display = 'none'; // エラーメッセージを非表示にする
-                // ログイン成功後のリダイレクトなど
-                // window.location.href = '/dashboard'; // 例: ダッシュボードページへリダイレクト
+                C.style.display = 'none';
             } else {
-                errorMessage.style.display = 'block'; // エラーメッセージを表示
+                C.style.display = 'block';
             }
         });
     </script>
