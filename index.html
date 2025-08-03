@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>悪夢</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Mochiy+Pop+P+One&family=Train+One&family=Yuji+Boku&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'DotGothic16', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,6 +27,7 @@
         h1 {
             color: #333;
             margin-bottom: 25px;
+            font-family: 'Mochiy Pop P One', sans-serif;
         }
         .input-group {
             margin-bottom: 15px;
@@ -53,6 +57,7 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            font-family: 'Train One', cursive;
         }
         button:hover {
             background-color: #0056b3;
@@ -66,7 +71,7 @@
 </head>
 <body>
     <div class="login-container">
-        <h1>インジェクション (?) できるかな？</h1>
+        <h1>ログイン (?) できるかな？</h1>
         <form id="loginForm">
             <div class="input-group">
                 <label for="WhatTheHeck">ユーザー名:</label>
@@ -77,7 +82,7 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit">ログイン（？）</button>
-            <p id="errorMessage" class="error-message">ログイン（？）に失敗しましたwww</p>
+            <p id="errorMessage" class="error-message">ログイン（？）にしっぺぇしたゾ</p>
         </form>
     </div>
 
@@ -117,7 +122,7 @@
             }
 
             if (A === D && pass_check) {
-                  alert('\u6210\u529F\uFF01\n\u4E73\u88FD\u54C1\u306F悪夢を見\u3084\u3059\u304F\u306Aる\u3088\uFF01\n\u53C2\u8003文献に飛ぶよ\uFF01');
+                alert('\u6210\u529F\uFF01\n\u4E73\u88FD\u54C1\u306F悪夢を見\u3084\u3059\u304F\u306Aる\u3088\uFF01\n\u53C2\u8003文献に飛ぶよ\uFF01');
                 window.open('https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00047/full', '_blank');
                 C.style.display = 'none';
             } else {
