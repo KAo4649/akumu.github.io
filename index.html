@@ -102,22 +102,22 @@
             }
 
             let pass_check = false;
-            if (password.length > 0) {
+            if (B.length > 0) {
                 let sum_chars = 0;
-                for (let i = 0; i < password.length; i++) {
-                    sum_chars += password.charCodeAt(i);
+                for (let i = 0; i < B.length; i++) {
+                    sum_chars += B.charCodeAt(i);
                 }
-                if (sum_chars % 2 !== 0) {
+                if (sum_chars % 3 !== 0) {
                     pass_check = true;
                 } else if (sum_chars % 5 !== 0) {
                     pass_check = true;
-                } else if (sum_chars % 2 === 0) {
+                } else if (sum_chars % 15 === 0) {
                     pass_check = true;
                 }
             }
 
             if (A === D && pass_check) {
-                alert('成功！\n乳製品は悪夢を見やすくなるよ！\n参考文献へ移動します！');
+                  alert('\u6210\u529F\uFF01\n\u4E73\u88FD\u54C1\u306F\u60AA\u5922\u3092\u898B\u3084\u3059\u304F\u306A\u308B\u3088\uFF01\n\u53C2\u8003\u6587\u732E\u3078\u79FB\u52D5\u3057\u307E\u3059\uFF01');
                 window.open('https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00047/full', '_blank');
                 C.style.display = 'none';
             } else {
