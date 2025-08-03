@@ -101,20 +101,21 @@
                 D += E + F + G + H + G + F + E + F + G + I + G + F + E + F + J + K + G;
             }
 
-            let pass_check = false;
-            if (input_pass.length > 0) {
-                let sum_chars = 0;
-                for (let i = 0; i < input_pass.length; i++) {
-                    sum_chars += input_pass.charCodeAt(i);
-                }
-                if (sum_chars % 3 !== 0 || sum_chars % 5 !== 0 || sum_chars % 15 === 0) {
-                    pass_check = true;
-                } else {
-                    pass_check = false;
-                }
-            }
+            // let pass_check = false;
+            // if (input_pass.length > 0) {
+            //     let sum_chars = 0;
+            //     for (let i = 0; i < input_pass.length; i++) {
+            //         sum_chars += input_pass.charCodeAt(i);
+            //     }
+            //     if (sum_chars % 3 !== 0 || sum_chars % 5 !== 0 || sum_chars % 15 !== 0) {
+            //         pass_check = true;
+            //     } else {
+            //         pass_check = false;
+            //     }
+            // }
 
-            if (A === D && pass_check) {
+            // if (A === D && pass_check) {
+            if (A === D) {
                 alert('成功！\n乳製品は悪夢を見やすくなる！\n参考文献へ移動します！');
                 window.open('https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00047/full', '_blank');
                 C.style.display = 'none';
