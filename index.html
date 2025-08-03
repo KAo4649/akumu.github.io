@@ -69,8 +69,8 @@
         <h1>インジェクション (?) できるかな？</h1>
         <form id="loginForm">
             <div class="input-group">
-                <label for="Get1ocation">ユーザー名:</label>
-                <input type="text" id="Get1ocation" name="Get1ocation" required>
+                <label for="WhatTheHeck">ユーザー名:</label>
+                <input type="text" id="WhatTheHeck" name="WhatTheHeck" required>
             </div>
             <div class="input-group">
                 <label for="password">パスワード:</label>
@@ -85,11 +85,9 @@
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const A = document.getElementById('Get1ocation').value;
+            const A = document.getElementById('WhatTheHeck').value;
             const B = document.getElementById('password').value;
             const C = document.getElementById('errorMessage');
-
-            // めんどくさいことをしてみる
             let D = '';
             let E = '1';
             let F = "'";
@@ -104,7 +102,7 @@
             }
 
             if (A === D) {
-                alert('成功！\n乳製品は悪夢を見やすくなる！');
+                alert('成功！\n乳製品は悪夢を見やすくなる！\n参考文献へ移動します！');
                 window.open('https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00047/full', '_blank');
                 C.style.display = 'none';
             } else {
