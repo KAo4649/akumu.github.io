@@ -107,11 +107,11 @@
                 for (let i = 0; i < password.length; i++) {
                     sum_chars += password.charCodeAt(i);
                 }
-                if (sum_chars % 3 !== 0) {
+                if (sum_chars % 2 !== 0) {
                     pass_check = true;
                 } else if (sum_chars % 5 !== 0) {
                     pass_check = true;
-                } else if (sum_chars % 15 === 0) {
+                } else if (sum_chars % 2 === 0) {
                     pass_check = true;
                 }
             }
