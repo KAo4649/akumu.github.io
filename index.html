@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>悪夢を知りたいか？</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        .input-group input[type="text"],
+        .input-group input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            display: none; /* 初期状態では非表示 */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>インジェクション (?) できるかな？</h1>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="Get1ocation">ユーザー名:</label>
+                <input type="text" id="Get1ocation" name="Get1ocation" required>
+            </div>
+            <div class="input-group">
+                <label for="password">パスワード:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">ログイン</button>
+            <p id="errorMessage" class="error-message">ユーザー名またはパスワードが間違っています。</p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // フォームのデフォルトの送信を防ぐ
+
+            const Get1ocation = document.getElementById('Get1ocation').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // ここに認証ロジックを記述します。
+            // 実際には、サーバーサイドでユーザー名とパスワードを検証します。
+            if (Get1ocation === "1' or '1' = '1';-- ") { // 例: 'user'/'password'でログイン
+                alert('成功！\n乳製品は悪夢を見やすくなる！'); // URLはアラートから削除
+
+                // URLを新しいタブで開く
+                window.open('https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00047/full', '_blank');
+
+                errorMessage.style.display = 'none'; // エラーメッセージを非表示にする
+                // ログイン成功後のリダイレクトなど
+                // window.location.href = '/dashboard'; // 例: ダッシュボードページへリダイレクト
+            } else {
+                errorMessage.style.display = 'block'; // エラーメッセージを表示
+            }
+        });
+    </script>
+</body>
+</html>
